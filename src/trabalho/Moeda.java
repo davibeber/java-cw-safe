@@ -12,12 +12,17 @@ public abstract class Moeda{
     
     public abstract double converter();
     
-    @Override
+    
+    
+    @Override  
     public boolean equals(Object obj) {
         if (obj == null || getClass() != obj.getClass()){
             return false;
         }
+        
+          
         Moeda other = (Moeda) obj;
         return Double.compare(valor, other.valor) == 0;
+        
     }
 }
